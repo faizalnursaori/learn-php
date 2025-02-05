@@ -10,3 +10,5 @@ $person->sayHello("Budi");
 // $this->name → Mengacu pada properti name milik objek Person(Faizal).
 
 var_dump($person);
+
+$person->info();
