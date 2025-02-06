@@ -13,22 +13,14 @@ Kalau ada dua class begitu akan conflict
 */
 
 //Untuk menghindari conflict tersebut maka gunakan Namespace
-namespace Data\One{
-    class Conflict{
+namespace Data\One {
+    class Conflict {}
 
-    }
+    class Sample {}
 
-    class Sample{
-
-    }
-
-    class Dummy{
-        
-    }
+    class Dummy {}
 }
 
-namespace Data\Two{
-    class Conflict{
-        
-    }
+namespace Data\Two {
+    class Conflict {}
 }

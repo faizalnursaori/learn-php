@@ -9,9 +9,9 @@ require_once "data/Helper.php";
 // use Data\One\Sample;
 
 //Import Group
-use Data\One\Conflict{Conflict, Dummy, Sample};
+use Data\One\{Conflict, Dummy, Sample};
 use function Helper\{helpme};
 
 $conflict = new Conflict();
 $dummy = new Dummy();
-$sample = new Sample;
+$sample = new Sample();
