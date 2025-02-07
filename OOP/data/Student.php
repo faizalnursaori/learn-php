@@ -16,4 +16,15 @@ class Student
     {
         unset($this->sample); //Hapus property menggunakan unset
     }
+
+    public function __toString(): string
+    {
+        return "Student IO: $this->id, Name: $this->name, Value: $this->value";
+    }
+
+    public function __invoke(...$arguments): void
+    {
+        $join = join(", ", $arguments);
+        echo "Invoke student with argument $join" . PHP_EOL;
+    }
 }

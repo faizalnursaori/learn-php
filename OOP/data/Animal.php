@@ -2,11 +2,15 @@
 
 namespace Data;
 
+require_once "Food.php";
+
 abstract class Animal
 {
     public string $name;
 
     abstract public function run(): void; //Siapapun yang menggunakan subclass pada class ini wajib memiliki function ini
+
+    abstract public function eat(AnimalFood $animalFood): void;
 }
 
 class Cat extends Animal
@@ -15,6 +19,12 @@ class Cat extends Animal
     {
         echo "Cat $this->name is running" . PHP_EOL;
     }
+
+
+    public function eat(AnimalFood $animalFood): void
+    {
+        echo "Cat is eating" . PHP_EOL;
+    }
 }
 
 class Dog extends Animal
@@ -22,5 +32,10 @@ class Dog extends Animal
     public function run(): void
     {
         echo "Dog $this->name is barking" . PHP_EOL;
+    }
+
+    public function eat(Food $animalFood): void
+    {
+        echo "Dog is eating" . PHP_EOL;
     }
 }
